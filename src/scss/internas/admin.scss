@@ -1,0 +1,100 @@
+@import '../base/variables';
+
+.alerta{
+    text-align: center;
+    padding: .5rem;
+    color: $blanco;
+    font-weight: bold;
+    text-transform: uppercase;
+    &.error{
+        background-color: $rojo;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+    &.exito{
+        background-color: $verde;
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+}
+
+table.propiedades{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+    background-color: $blanco;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .08);
+
+    thead{
+        background-color: $verde;
+        th{
+            color: $blanco;
+            font-weight: 700;
+            text-align: left;
+            padding: 1.2rem 1.6rem;
+        }
+    }
+
+    tbody{
+        tr{
+            border-bottom: 1px solid #e7e7e7;
+
+            &:nth-child(even){
+                background-color: #fafafa;
+            }
+        }
+
+        td{
+            padding: 1.2rem 1.6rem;
+            vertical-align: middle;
+        }
+    }
+
+    .imagen-tabla{
+        width: 12rem;
+        height: 8rem;
+        object-fit: cover;
+        border-radius: .5rem;
+    }
+
+    .acciones {
+        min-width: 20rem;
+    }
+
+    .acciones a {
+        margin-top: .8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    table.propiedades {
+        thead {
+            display: none;
+        }
+
+        tbody tr {
+            display: block;
+            margin-bottom: 1.5rem;
+            border: 1px solid #e7e7e7;
+            border-radius: .8rem;
+            overflow: hidden;
+        }
+
+        tbody td {
+            display: block;
+            padding: 1rem 1.2rem;
+            border-bottom: 1px solid #efefef;
+        }
+    }
+}
+.imagen-small{
+    width: 30rem;
+
+}
+.w-100{
+    width: 100%;
+}
